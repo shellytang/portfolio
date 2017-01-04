@@ -10,8 +10,8 @@ function Article (options) {
 }
 Article.prototype.toHtml = function() {
   var $newArticle = $('article.template').clone();
-  $newArticle.find('address a').attr('href', this.authorUrl);
-  $newArticle.find('.byLine address a').text(this.author);
+  $newArticle.find('address a').attr('href', this.client);
+  $newArticle.find('a').text(this.author);
   $newArticle.find('.article-body').html(this.body);
   $newArticle.find('h1').text(this.title);
   $newArticle.find('h2').text(this.client);
