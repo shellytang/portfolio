@@ -1,14 +1,7 @@
-.main-nav {
-  outline: 2px dotted blue;
-}
-
 .main-nav ul {
-  /* NOTE: We are by defualt hiding the main nav list because we are
-      expecting the UI to be mobile, therefore our new icon menu
-      takes its place. */
   display: none;
   padding: 0;
-  list-style: none;
+  /*list-style: none;*/
   clear: both;
 }
 
@@ -23,16 +16,13 @@
 
 .site-header {
   background-color: rgba(61, 208, 172, 1);
-  outline: 2px dotted orange;
   height: 7em;
   position: relative;
 }
 
 .fa-bars {
-  position: fixed;
   float: right;
   font: 50px;
-  text-align: right;
   top: 0;
   right: 0;
 }
@@ -55,7 +45,6 @@
     padding: 10px;
   }
 }
-
 .template {
   display: none;
 }
