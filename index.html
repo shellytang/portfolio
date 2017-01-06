@@ -5,19 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
     <script src="https://use.fontawesome.com/e59aea226d.js"></script>
+<!-- handlebars template for project info  -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <div class="image">{{{image}}}</div>
+        <h1>{{title}}</h1>
+        <h2>{{client}}</h2>
+        <p>{{completed}}</p>
+        <div class="article-body">{{{body}}}</div>
+    </article>
+    </script>
+<!-- end handlebars template for project info -->
     <title>My Portfolio</title>
   </head>
 
   <body>
 
     <header class="site-header">
-
       <section class="heading">
         <h1>Shelly Tang</h1>
       </section>
-
       <nav class="main-nav">
         <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i>
         <ul>
@@ -27,32 +37,18 @@
           <li class="tab" data-content="contact"><a href="#">Contact</a></li>
         </ul>
       </nav>
-
     </header>
 
   <main>
     <section id="home" class="tab-content">
       <h1>homepage work in progress...</h1>
-
-
     </section>
-
-<!-- ### Below articles section taken from day-2 lab and refactored for this project ##### -->
 
     <section id="articles" class="tab-content">
-      <article class="template">
-        <header>
-          <h1>Title</h1>
-          <h2>Client</h2>
-          <p>Completed</p>
-        </header>
-        <section class="article-body"></section>
-      </article>
+<!--project info go here, see handlebars script in head  -->
     </section>
 
-
     <section id="about" class="tab-content">
-      <img src=""></img>
       <h2>About Me</h2>
       <p>Hi! I'm Shelly Tang.</p>
     </section>
@@ -67,10 +63,9 @@
     </section>
   </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/projectArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/navView.js"></script>
-
   </body>
-
 </html>
