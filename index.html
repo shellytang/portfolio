@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
     <script src="https://use.fontawesome.com/e59aea226d.js"></script>
+<!-- handlebars template for project info  -->
     <script id="project-template" type="text/x-handlebars-template">
-            <div class="image">{{{image}}}</div>
-            <h1>{{title}}</h1>
-            <h2>{{client}}</h2>
-            <p>{{completed}}</p>
-          <section class="article-body">{{{body}}}</section>
-        </article>
+      <article>
+        <div class="image">{{{image}}}</div>
+        <h1>{{title}}</h1>
+        <h2>{{client}}</h2>
+        <p>{{completed}}</p>
+        <div class="article-body">{{{body}}}</div>
+    </article>
     </script>
+<!-- end handlebars template for project info -->
     <title>My Portfolio</title>
   </head>
 
@@ -41,10 +44,9 @@
       <h1>homepage work in progress...</h1>
     </section>
 
-    <section id="articles" class="tab-content"></section>
-      <article class="template">
-<!-- +++++++++++++ project details go here, see handlebars script in head ++++++++++++++ -->
-      </article>
+    <section id="articles" class="tab-content">
+<!--project info go here, see handlebars script in head  -->
+    </section>
 
     <section id="about" class="tab-content">
       <h2>About Me</h2>
@@ -65,7 +67,5 @@
     <script src="scripts/projectArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/navView.js"></script>
-
   </body>
-
 </html>
