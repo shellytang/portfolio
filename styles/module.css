@@ -24,7 +24,9 @@
 
 #about {
   text-align: center;
-  margin-top: 10px;
+  /*margin-top: 10px;*/
+  max-width: 100%;
+  padding-bottom: 2px;
 }
 
 /*set image to percentage*/
@@ -36,8 +38,7 @@
 }
 
 
-
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 730px) {
   #hamburger {
     display: none;
   }
