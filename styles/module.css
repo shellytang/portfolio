@@ -20,6 +20,23 @@
   position: relative;
 }
 
+/*+++++++++++++++++++++*/
+
+#about {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*set image to percentage*/
+#about img {
+  width: 35%;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 1em;
+}
+
+
+
 @media screen and (min-width: 760px) {
   #hamburger {
     display: none;
@@ -37,7 +54,15 @@
     color: white;
     padding: 10px;
   }
+
+/*+++++++++++++++  */
+/*
+#about {
+  text-align: center;
+}*/
+
 }
-.template {
+
+/*.template {
   display: none;
-}
+}*/

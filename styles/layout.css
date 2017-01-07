@@ -17,6 +17,9 @@
   right: 0;
 }
 
+.tab-content {
+  outline: 2px solid blue;
+}
 @media screen and (min-width: 760px) {
 
 
