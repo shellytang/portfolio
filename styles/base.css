@@ -1,13 +1,13 @@
 body {
   background-image: url("../images/upfeathers.png");
-  background-attachment: fixed;
   font-family: 'Lato', sans-serif;
 }
 main {
   background-color: #FFF;
   width: 80%;
-  height: 100%;
   margin: auto;
+  min-height: 300px;
+  outline: 3px dotted orange;
 }
 
 nav {
@@ -40,9 +40,30 @@ nav ul li {
 
 h2 {
   font-size: 1.5em;
+}
+
+#about h2 {
+  margin-top: 0.75em;
+}
+#about p {
+  line-height: 1.5em;
+  margin: 1em 1.3em 1em 1.3em;
+}
+
+#about {
+  text-align: center;
+  /*max-width: 100%;*/
+}
+
+/*set image to percentage*/
+#about img {
+  width: 35%;
+  border-radius: 50%;
+  border: 2px solid black;
   margin-top: 1em;
 }
 
+/*++++++ template p styling +++++++++*/
 p {
   line-height: 1.5em;
   margin-top: 1em;
@@ -53,14 +74,16 @@ p {
 footer {
   background-color: #3DD0AC;
   height: 4.5em;
-  bottom: 0;
   width: 100%;
-}
-footer p {
+  position: absolute;
   text-align: center;
-  padding-top: 1.5em;
 }
 
+footer p {
+  margin-top: 1em;
+  margin-left: 1.3em;
+  margin-right: 1.3em;
+}
 
 @media screen and (min-width: 730px) {
 
