@@ -1,32 +1,9 @@
-.main-nav ul {
-  display: none;
-  padding: 0;
-  /*list-style: none;*/
-  clear: both;
-}
-
-.main-nav:hover ul {
-  display: block;
-  float: right;
-}
-
-.main-nav li {
-  font-size: 1.5em;
-}
-
-.site-header {
-  background-color: rgba(61, 208, 172, 1);
-  height: 7em;
-  position: relative;
-}
-
-/*+++++++++++++++++++++*/
-
 #about {
   text-align: center;
   /*margin-top: 10px;*/
   max-width: 100%;
   padding-bottom: 2px;
+
 }
 
 /*set image to percentage*/
@@ -39,28 +16,9 @@
 
 
 @media screen and (min-width: 730px) {
-  #hamburger {
+  /*#hamburger {
     display: none;
-  }
-  .main-nav ul {
-    display: block;
-    color: white;
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-  }
-  .main-nav li {
-    display: inline;
-    color: white;
-    padding: 10px;
-  }
-
-/*+++++++++++++++  */
-/*
-#about {
-  text-align: center;
-}*/
+  }*/
 
 }
 
