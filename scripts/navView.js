@@ -12,7 +12,8 @@ navView();
 
 function toggleArticleBody () {
   $('.article-body').hide();
+  $('#articles h2, #articles h3').hide();
   $('.image').on('click', function (){
-    $(this).siblings('.article-body').toggle();
+    $(this).siblings('h2, h3, .article-body').toggle();
   });
 }
