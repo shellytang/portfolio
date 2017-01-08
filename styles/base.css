@@ -70,22 +70,28 @@ h2 {
   display: block;
   margin: auto;
 }
+
 #articles article {
   padding: 1em;
 }
 
+#articles h1 {
+  text-align: center;
+  padding: 0.3em;
+  font-size: 1.4em;
+}
+
 #articles h2 {
   text-align: center;
-  padding: 0.5em;
-  font-size: 1.2em;
+  font-size: 1.1em;
+  padding: 0.3em;
 }
 
 #articles h3 {
   text-align: center;
-  font-style: italic;
   font-size: 1em;
+  padding: 0.3em;
 }
-
 #articles p {
   line-height: 1.4em;
   margin-left: 1.3em;
@@ -126,5 +132,12 @@ footer p {
   }
   nav ul li {
     display: inline;
+  }
+  .projectimage {
+    opacity: 0.8;
+  }
+
+  .projectimage:hover {
+    opacity: 1;
   }
 }
