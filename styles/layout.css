@@ -1,7 +1,4 @@
-.projectimage {
-  width: 40%;
-  display: inline-block;
-}
+
 /*.fa-bars {
   float: right;
   font: 50px;
@@ -9,9 +6,6 @@
   right: 0;
 }*/
 
-.tab-content {
-  outline: 2px solid blue;
-}
 @media screen and (min-width: 730px) {
 
 

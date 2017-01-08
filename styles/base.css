@@ -6,17 +6,14 @@ main {
   background-color: #FFF;
   width: 80%;
   margin: auto;
+  padding: 0.75em;
   min-height: 300px;
-  outline: 3px dotted orange;
 }
-
 nav {
-  outline: 2px dotted grey;
   background-color: #3DD0AC;
   height: 163px;
   position: relative;
 }
-
 nav h1 {
   font-size: 1.5em;
   letter-spacing: 0.3em;
@@ -25,7 +22,6 @@ nav h1 {
   width: 100%;
   top: 1.2em;
 }
-
 nav ul {
   display: block;
   position: absolute;
@@ -33,11 +29,9 @@ nav ul {
   top: 65px;
   text-align: center;
 }
-
 nav ul li {
   padding: 0.3em;
 }
-
 h2 {
   font-size: 1.5em;
 }
@@ -54,7 +48,6 @@ h2 {
   text-align: center;
   /*max-width: 100%;*/
 }
-
 /*set image to percentage*/
 #about img {
   width: 35%;
@@ -62,13 +55,21 @@ h2 {
   border: 2px solid black;
   margin-top: 1em;
 }
-
-/*++++++ template p styling +++++++++*/
+/*++++++ general p styling +++++++++*/
 p {
   line-height: 1.5em;
   margin-top: 1em;
   margin-left: 1.3em;
   margin-right: 1.3em;
+}
+/*.projectimage {
+  width: 40%;
+  display: inline-block;
+}*/
+.projectimage {
+  width: 60%;
+  display: block;
+  margin: auto;
 }
 
 footer {
@@ -78,7 +79,6 @@ footer {
   position: absolute;
   text-align: center;
 }
-
 footer p {
   margin-top: 1em;
   margin-left: 1.3em;
