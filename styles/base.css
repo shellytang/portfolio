@@ -1,3 +1,6 @@
+/** {
+  outline: 2px dotted blue;
+}*/
 body {
   background-image: url("../images/upfeathers.png");
   font-family: 'Lato', sans-serif;
@@ -56,20 +59,37 @@ h2 {
   margin-top: 1em;
 }
 /*++++++ general p styling +++++++++*/
-p {
+/*p {
   line-height: 1.5em;
   margin-top: 1em;
   margin-left: 1.3em;
   margin-right: 1.3em;
-}
-/*.projectimage {
-  width: 40%;
-  display: inline-block;
 }*/
 .projectimage {
   width: 60%;
   display: block;
   margin: auto;
+}
+#articles article {
+  padding: 1em;
+}
+
+#articles h2 {
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.2em;
+}
+
+#articles h3 {
+  text-align: center;
+  font-style: italic;
+  font-size: 1em;
+}
+
+#articles p {
+  line-height: 1.4em;
+  margin-left: 1.3em;
+  margin-right: 1.3em;
 }
 
 footer {
