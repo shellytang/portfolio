@@ -7,50 +7,46 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <script src="https://use.fontawesome.com/e59aea226d.js"></script>
 <!-- handlebars template for project info  -->
     <script id="project-template" type="text/x-handlebars-template">
       <article>
         <div class="image">{{{image}}}</div>
-        <h1>{{title}}</h1>
-        <h2>{{client}}</h2>
-        <p>{{completed}}</p>
-        <div class="article-body">{{{body}}}</div>
-    </article>
+        <!-- <div content="show"> -->
+          <h1>{{title}}</h1>
+          <h2>{{client}}</h2>
+          <h3>{{completed}}</h3>
+          <div class="article-body">{{{body}}}</div>
+        <!-- </div> -->
+      </article>
     </script>
 <!-- end handlebars template for project info -->
-    <title>My Portfolio</title>
+    <title>Portfolio</title>
   </head>
 
   <body>
-
-    <header class="site-header">
-      <section class="heading">
-        <h1>Shelly Tang</h1>
-      </section>
-      <nav class="main-nav">
-        <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i>
-        <ul>
-          <li class="tab" data-content="home"><a href="#">Home</a></li>
-          <li class="tab" data-content="about"><a href="#">About Me</a></li>
-          <li class="tab" data-content="articles"><a href="#">Projects</a></li>
-          <li class="tab" data-content="contact"><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+    <nav class="main-nav">
+      <!-- <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i> -->
+      <h1>Shelly Tang</h1>
+      <ul>
+        <li class="tab" data-content="articles"><a href="#">Portfolio</a></li>
+        <li class="tab" data-content="about"><a href="#">About Me</a></li>
+        <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
   <main>
-    <section id="home" class="tab-content">
-      <h1>homepage work in progress...</h1>
-    </section>
-
     <section id="articles" class="tab-content">
+
 <!--project info go here, see handlebars script in head  -->
+
     </section>
 
     <section id="about" class="tab-content">
-      <h2>About Me</h2>
-      <p>Hi! I'm Shelly Tang.</p>
+      <img src="images/shelly.jpg">
+      <h2>Hi! I'm Shelly Tang.</h2>
+      <p>Tacos yuccie single-origin coffee photo booth mlkshk, authentic migas ugh health goth. Kickstarter keytar tilde kale chips VHS. Adipisicing kombucha minim, banh mi excepteur echo park ea irure wayfarers food truck try-hard disrupt marfa williamsburg cliche. Shoreditch et freegan, locavore veniam before they sold out chambray cred. Aute veniam fashion axe reprehenderit vice waistcoat squid church-key street art, yuccie incididunt. Est gluten-free master cleanse voluptate pariatur, cray raw denim jianbing esse copper mug vaporware raclette. Single-origin coffee vexillologist VHS, wayfarers scenester literally austin pop-up tacos magna nulla paleo.</p>
     </section>
 
     <section id="contact" class="tab-content">
@@ -62,6 +58,10 @@
       <li><a href="https://github.com/shellytang">GitHub</a></li>
     </section>
   </main>
+
+  <footer>
+    <p>Shelly Tang &copy 2017</p>
+  </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
     <script src="scripts/projectArticles.js"></script>
