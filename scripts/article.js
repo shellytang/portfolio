@@ -1,6 +1,8 @@
 'use strict';
 
-var articles = [];
+Article.all = [];
+// tracks all articles directly in constructor function, see lab notes for info
+
 function Article (options) {
   this.body = options.body;
   this.title = options.title;
@@ -8,14 +10,33 @@ function Article (options) {
   this.completed = options.completed;
   this.image = options.image;
 }
+
 Article.prototype.toHtml = function() {
   var source = $('#project-template').html();
   var templateRender = Handlebars.compile(source);
   return templateRender(this);
 };
-blogArticles.forEach(function(ele) {
-  articles.push(new Article(ele));
-});
-articles.forEach(function(article) {
-  $('#articles').append(article.toHtml());
-});
+
+Article.loadProjects = function (parsedData) {
+  parsedData.forEach(function(ele) {
+    Article.all.push(new Article(ele));
+  });
+}
+
+Article.fetchAll = function() {
+  if (localStorage.rawData) {
+    var parsedData = JSON.parse(localStorage.rawData);
+    Article.loadProjects(parsedData);
+    projectView.initIndexPage();
+  } else {
+    $.getJSON('data/projectArticles.json')
+     .done(function(data, message, xhr) { //eslint-disable-line
+        localStorage.setItem('rawData', JSON.stringify(data)); //eslint-disable-line
+        Article.loadProjects(data); //eslint-disable-line
+        projectView.initIndexPage(); //eslint-disable-line
+      }) //eslint-disable-line
+     .fail(function(err){ //eslint-disable-line
+        console.error(err); //eslint-disable-line
+      }) //eslint-disable-line
+  }
+}
