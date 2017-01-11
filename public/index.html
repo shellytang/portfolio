@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/layout.css">
+    <link rel="stylesheet" href="styles/module.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://use.fontawesome.com/e59aea226d.js"></script>
+<!-- handlebars template for project info  -->
+    <script id="project-template" type="text/x-handlebars-template">
+      <article>
+        <div class="image">{{{image}}}</div>
+        <!-- <div content="show"> -->
+          <h1>{{title}}</h1>
+          <h2>{{client}}</h2>
+          <h3>{{completed}}</h3>
+          <div class="article-body">{{{body}}}</div>
+        <!-- </div> -->
+      </article>
+    </script>
+<!-- end handlebars template for project info -->
+    <title>Portfolio</title>
+  </head>
+
+  <body>
+    <nav class="main-nav">
+      <!-- <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i> -->
+      <h1>Shelly Tang</h1>
+      <ul>
+        <li class="tab" data-content="articles"><a href="#">Portfolio</a></li>
+        <li class="tab" data-content="about"><a href="#">About Me</a></li>
+        <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+  <main>
+    <section id="articles" class="tab-content">
+
+<!--project info go here, see handlebars script in head  -->
+
+    </section>
+
+    <section id="about" class="tab-content">
+      <img src="images/shelly.jpg">
+      <h2>Hi! I'm Shelly Tang.</h2>
+      <p>Tacos yuccie single-origin coffee photo booth mlkshk, authentic migas ugh health goth. Kickstarter keytar tilde kale chips VHS. Adipisicing kombucha minim, banh mi excepteur echo park ea irure wayfarers food truck try-hard disrupt marfa williamsburg cliche. Shoreditch et freegan, locavore veniam before they sold out chambray cred. Aute veniam fashion axe reprehenderit vice waistcoat squid church-key street art, yuccie incididunt. Est gluten-free master cleanse voluptate pariatur, cray raw denim jianbing esse copper mug vaporware raclette. Single-origin coffee vexillologist VHS, wayfarers scenester literally austin pop-up tacos magna nulla paleo.</p>
+    </section>
+
+    <section id="contact" class="tab-content">
+      <h2>Let's Connect<h2>
+      <li><a href="mailto:shellytang@gmail.com">shellytang@gmail.com</a></li>
+      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+      <li><a href="https://www.linkedin.com/in/shelly-tang-1984a413">LinkedIn</a></li>
+      <i class="fa fa-github-square" aria-hidden="true"></i>
+      <li><a href="https://github.com/shellytang">GitHub</a></li>
+    </section>
+  </main>
+
+  <footer>
+    <p>Shelly Tang &copy 2017</p>
+  </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
+    <script src="scripts/projectArticles.js"></script>
+    <script src="scripts/article.js"></script>
+    <script src="scripts/projectView.js"></script>
+    <script>Article.fetchAll();</script>
+  </body>
+</html>
