@@ -22,6 +22,11 @@
       </article>
     </script>
 <!-- end handlebars template for project info -->
+<!-- handlebars template for about me - summary of work experience section -->
+    <!-- <script id="aboutWork-template" type="text/x-handlebars-template">
+      <li>{{title}}</li>
+    </script> -->
+<!-- end handlebars template for about me - summary of work experience section -->
     <title>Portfolio</title>
   </head>
 
@@ -47,6 +52,9 @@
       <img src="images/shelly.jpg">
       <h2>Hi! I'm Shelly Tang.</h2>
       <p>Tacos yuccie single-origin coffee photo booth mlkshk, authentic migas ugh health goth. Kickstarter keytar tilde kale chips VHS. Adipisicing kombucha minim, banh mi excepteur echo park ea irure wayfarers food truck try-hard disrupt marfa williamsburg cliche. Shoreditch et freegan, locavore veniam before they sold out chambray cred. Aute veniam fashion axe reprehenderit vice waistcoat squid church-key street art, yuccie incididunt. Est gluten-free master cleanse voluptate pariatur, cray raw denim jianbing esse copper mug vaporware raclette. Single-origin coffee vexillologist VHS, wayfarers scenester literally austin pop-up tacos magna nulla paleo.</p>
+      <!-- the below pulls info from an array with the .map() method -->
+      <p class="projectSummary">Experience with:  </p>
+      <p class="clientSummary">Previous clients: </p>
     </section>
 
     <section id="contact" class="tab-content">
@@ -64,7 +72,6 @@
   </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/projectArticles.js"></script>
     <script src="scripts/article.js"></script>
     <script src="scripts/projectView.js"></script>
     <script>Article.fetchAll();</script>
