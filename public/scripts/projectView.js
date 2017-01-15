@@ -20,11 +20,30 @@
     });
   }
 
+  //*******************
+
+  projectView.insertAboutWorkSection = function(){
+    $('.projectSummary').append((Article.listCategory()));
+  }
+  //
+  // projectView.initAbout = function () {
+  //   Article.listCategory().forEach(function(stat){
+  //     $('.projectSummary').append(stat.toHtml());
+  //   });
+  // }
+
+
+
+
+
+  //******************
+
   projectView.initIndexPage = function () {
     Article.all.forEach(function(article) {
       $('#articles').append(article.toHtml());
     });
     projectView.handleMainNav();
+    projectView.insertAboutWorkSection();
   }
 
 // ++++ desktop view: hide images and show description of clicked on image. will need to uncomment div .show and in css desktopView if testing. this also broke the reload of portfolio page ++++++

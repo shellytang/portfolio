@@ -11,12 +11,24 @@
   }
 
   Article.all = [];
+
   Article.prototype.toHtml = function() {
     var source = $('#project-template').html();
     var templateRender = Handlebars.compile(source);
     return templateRender(this);
   };
 
+//***************
+
+  Article.listCategory = function() {
+    return Article.all.map(function(article){
+      return article.title;
+    }).join(', ');
+  }
+
+
+
+//**********
   Article.loadProjects = function (parsedData) {
     parsedData.forEach(function(ele) {
       Article.all.push(new Article(ele));
@@ -27,7 +39,7 @@
     if (localStorage.rawData) {
       var parsedData = JSON.parse(localStorage.rawData);
       Article.loadProjects(parsedData);
-      projectView.initIndexPage();
+      projectView.initIndexPage(); //eslint-disable-line
     } else {
       $.getJSON('data/projectArticles.json')
        .done(function(data, message, xhr) { //eslint-disable-line
