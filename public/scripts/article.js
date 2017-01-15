@@ -34,7 +34,7 @@ Article.allClients = function(){
       names.push(name);
     }
     return names;
-  }, []);
+  }, []).join(', ');
 }
 
 //++++++++++++++++++++++++
