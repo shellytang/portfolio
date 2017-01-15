@@ -18,17 +18,27 @@
     return templateRender(this);
   };
 
-//***************
-
+//+++++++ use map() to produce array of project titles/catgory
   Article.listCategory = function() {
     return Article.all.map(function(article){
       return article.title;
     }).join(', ');
   }
+//+++++++++ use reduce to produce array of unique clients +++++++++
 
+Article.allClients = function(){
+  return Article.all.map(function(article){
+    return article.client
+  }).reduce(function(names, name){
+    if (names.indexOf(name) === -1) {
+      names.push(name);
+    }
+    return names;
+  }, []);
+}
 
+//++++++++++++++++++++++++
 
-//**********
   Article.loadProjects = function (parsedData) {
     parsedData.forEach(function(ele) {
       Article.all.push(new Article(ele));

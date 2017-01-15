@@ -20,23 +20,12 @@
     });
   }
 
-  //*******************
-
+  //++++++++ list project title/category and clients from array using map() and reduce() and append to page ++++++
   projectView.insertAboutWorkSection = function(){
     $('.projectSummary').append((Article.listCategory()));
+    $('.clientSummary').append((Article.allClients()));
   }
-  //
-  // projectView.initAbout = function () {
-  //   Article.listCategory().forEach(function(stat){
-  //     $('.projectSummary').append(stat.toHtml());
-  //   });
-  // }
-
-
-
-
-
-  //******************
+  //+++++++++++++++
 
   projectView.initIndexPage = function () {
     Article.all.forEach(function(article) {
