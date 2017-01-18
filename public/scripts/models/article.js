@@ -13,7 +13,7 @@
   Article.all = [];
 
   Article.prototype.toHtml = function() {
-    var source = $('#project-template').html();
+    var source = $('#project-template').text();
     var templateRender = Handlebars.compile(source);
     return templateRender(this);
   };

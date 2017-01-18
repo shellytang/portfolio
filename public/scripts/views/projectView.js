@@ -4,14 +4,14 @@
 
   var projectView = {};
 
-  projectView.handleMainNav = function () {
-    projectView.toggleArticleBody();
-    $('.main-nav').on('click', '.tab', function(){
-      $('.tab-content').hide();
-      $('#'+$(this).attr('data-content')).fadeIn();
-    });
-    $('.main-nav .tab:first').click();
-  }
+  // projectView.handleMainNav = function () {
+  //   projectView.toggleArticleBody();
+  //   $('.main-nav').on('click', '.tab', function(){
+  //     $('.tab-content').hide();
+  //     $('#'+$(this).attr('data-content')).fadeIn();
+  //   });
+  //   $('.main-nav .tab:first').click();
+  // }
   projectView.toggleArticleBody = function () {
     $('.article-body').hide();
     $('#articles h2, #articles h3').hide();
@@ -31,7 +31,8 @@
     Article.all.forEach(function(article) {
       $('#articles').append(article.toHtml());
     });
-    projectView.handleMainNav();
+    // projectView.handleMainNav();
+    projectView.toggleArticleBody();
     projectView.insertAboutWorkSection();
   }
 

@@ -22,22 +22,16 @@
       </article>
     </script>
 <!-- end handlebars template for project info -->
-<!-- handlebars template for about me - summary of work experience section -->
-    <!-- <script id="aboutWork-template" type="text/x-handlebars-template">
-      <li>{{title}}</li>
-    </script> -->
-<!-- end handlebars template for about me - summary of work experience section -->
     <title>Portfolio</title>
   </head>
 
   <body>
     <nav class="main-nav">
-      <!-- <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i> -->
       <h1>Shelly Tang</h1>
       <ul>
-        <li class="tab" data-content="articles"><a href="#">Portfolio</a></li>
-        <li class="tab" data-content="about"><a href="#">About Me</a></li>
-        <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+        <li class="tab" data-content="articles"><a href="/">Portfolio</a></li>
+        <li class="tab" data-content="about"><a href="/about">About Me</a></li>
+        <li class="tab" data-content="contact"><a href="/contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -72,8 +66,14 @@
   </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script>Article.fetchAll();</script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <!-- <script src="vendors/scripts/page.js"></script> -->
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/controllers/articleController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
+    <script>Article.fetchAll()</script>
   </body>
 </html>
