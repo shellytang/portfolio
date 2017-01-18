@@ -44,22 +44,23 @@ Article.allClients = function(){
       Article.all.push(new Article(ele));
     });
   }
-
-  Article.fetchAll = function() {
+  Article.fetchAll = function(callback) {
     if (localStorage.rawData) {
       var parsedData = JSON.parse(localStorage.rawData);
       Article.loadProjects(parsedData);
-      projectView.initIndexPage(); //eslint-disable-line
+      callback();
+      // projectView.initIndexPage(); //eslint-disable-line
     } else {
       $.getJSON('data/projectArticles.json')
        .done(function(data, message, xhr) { //eslint-disable-line
           localStorage.setItem('rawData', JSON.stringify(data)); //eslint-disable-line
-          Article.loadProjects(data); //eslint-disable-line
-          projectView.initIndexPage(); //eslint-disable-line
-        }) //eslint-disable-line
+          // Article.loadProjects(data);
+          Article.fetchAll(callback);
+          // projectView.initIndexPage()
+       })
        .fail(function(err){ //eslint-disable-line
           console.error(err); //eslint-disable-line
-        }) //eslint-disable-line
+       })
     }
   }
   module.Article = Article;

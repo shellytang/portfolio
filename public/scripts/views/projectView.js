@@ -4,14 +4,6 @@
 
   var projectView = {};
 
-  // projectView.handleMainNav = function () {
-  //   projectView.toggleArticleBody();
-  //   $('.main-nav').on('click', '.tab', function(){
-  //     $('.tab-content').hide();
-  //     $('#'+$(this).attr('data-content')).fadeIn();
-  //   });
-  //   $('.main-nav .tab:first').click();
-  // }
   projectView.toggleArticleBody = function () {
     $('.article-body').hide();
     $('#articles h2, #articles h3').hide();
@@ -20,30 +12,22 @@
     });
   }
 
-  //++++++++ list project title/category and clients from array using map() and reduce() and append to page ++++++
+  //+++++project title/category & clients from array using map and reduce and append to about section ++++++
   projectView.insertAboutWorkSection = function(){
     $('.projectSummary').append((Article.listCategory()));
     $('.clientSummary').append((Article.allClients()));
   }
-  //+++++++++++++++
+  //++++++++++++++
 
   projectView.initIndexPage = function () {
     Article.all.forEach(function(article) {
       $('#articles').append(article.toHtml());
     });
-    // projectView.handleMainNav();
     projectView.toggleArticleBody();
     projectView.insertAboutWorkSection();
   }
 
-// ++++ desktop view: hide images and show description of clicked on image. will need to uncomment div .show and in css desktopView if testing. this also broke the reload of portfolio page ++++++
-// function toggleArticleBody () {
-//   $('.article-body').hide();
-//   $('#articles h2, #articles h3').hide();
-//   $('.image').on('click', function (){
-//     $('.image, article h1').hide();
-//     $(this).siblings().addClass('desktopView').children().fadeIn();
-//   });
-// }
+  Article.fetchAll(projectView.initIndexPage);
+
   module.projectView = projectView;
 })(window);
