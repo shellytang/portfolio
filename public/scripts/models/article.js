@@ -1,7 +1,7 @@
 'use strict';
 
 (function(module){
-  // tracks all articles directly in constructor function, see lab notes for info
+
   function Article (options) {
     this.body = options.body;
     this.title = options.title;
@@ -49,17 +49,17 @@ Article.allClients = function(){
       var parsedData = JSON.parse(localStorage.rawData);
       Article.loadProjects(parsedData);
       callback();
-      // projectView.initIndexPage(); //eslint-disable-line
+      // projectView.initIndexPage();
     } else {
       $.getJSON('data/projectArticles.json')
-       .done(function(data, message, xhr) { //eslint-disable-line
-          localStorage.setItem('rawData', JSON.stringify(data)); //eslint-disable-line
+       .done(function(data, message, xhr) {
+         localStorage.setItem('rawData', JSON.stringify(data));
           // Article.loadProjects(data);
           Article.fetchAll(callback);
           // projectView.initIndexPage()
        })
-       .fail(function(err){ //eslint-disable-line
-          console.error(err); //eslint-disable-line
+       .fail(function(err){
+         console.error(err);
        })
     }
   }

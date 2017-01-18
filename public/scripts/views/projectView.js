@@ -26,7 +26,7 @@
     projectView.toggleArticleBody();
     projectView.insertAboutWorkSection();
   }
-
+//moved Article.fetchAll from index page and called it here
   Article.fetchAll(projectView.initIndexPage);
 
   module.projectView = projectView;
