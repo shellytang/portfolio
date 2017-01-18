@@ -1,7 +1,7 @@
 'use strict';
 
 (function(module){
-  // tracks all articles directly in constructor function, see lab notes for info
+
   function Article (options) {
     this.body = options.body;
     this.title = options.title;
@@ -13,7 +13,7 @@
   Article.all = [];
 
   Article.prototype.toHtml = function() {
-    var source = $('#project-template').html();
+    var source = $('#project-template').text();
     var templateRender = Handlebars.compile(source);
     return templateRender(this);
   };
@@ -44,22 +44,23 @@ Article.allClients = function(){
       Article.all.push(new Article(ele));
     });
   }
-
-  Article.fetchAll = function() {
+  Article.fetchAll = function(callback) {
     if (localStorage.rawData) {
       var parsedData = JSON.parse(localStorage.rawData);
       Article.loadProjects(parsedData);
-      projectView.initIndexPage(); //eslint-disable-line
+      callback();
+      // projectView.initIndexPage();
     } else {
       $.getJSON('data/projectArticles.json')
-       .done(function(data, message, xhr) { //eslint-disable-line
-          localStorage.setItem('rawData', JSON.stringify(data)); //eslint-disable-line
-          Article.loadProjects(data); //eslint-disable-line
-          projectView.initIndexPage(); //eslint-disable-line
-        }) //eslint-disable-line
-       .fail(function(err){ //eslint-disable-line
-          console.error(err); //eslint-disable-line
-        }) //eslint-disable-line
+       .done(function(data, message, xhr) {
+         localStorage.setItem('rawData', JSON.stringify(data));
+          // Article.loadProjects(data);
+          Article.fetchAll(callback);
+          // projectView.initIndexPage()
+       })
+       .fail(function(err){
+         console.error(err);
+       })
     }
   }
   module.Article = Article;

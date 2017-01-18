@@ -57,6 +57,29 @@ h2 {
   border: 2px solid black;
   margin-top: 1em;
 }
+#contact {
+  text-align: center;
+}
+#contact h2 {
+  margin-top: 1.5em;
+}
+#contact p {
+  font-size: 0.8em;
+}
+#contact li {
+  list-style-type: none;
+  padding-left: 0.7em;
+  display: inline;
+}
+#contact ul {
+  font-size: 0.8em;
+  margin-top: 2em;
+
+}
+.icon {
+  color: grey;
+  padding-left: 1em; 
+}
 /*++++++ general p styling +++++++++*/
 /*p {
   line-height: 1.5em;

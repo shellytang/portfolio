@@ -22,22 +22,16 @@
       </article>
     </script>
 <!-- end handlebars template for project info -->
-<!-- handlebars template for about me - summary of work experience section -->
-    <!-- <script id="aboutWork-template" type="text/x-handlebars-template">
-      <li>{{title}}</li>
-    </script> -->
-<!-- end handlebars template for about me - summary of work experience section -->
     <title>Portfolio</title>
   </head>
 
   <body>
     <nav class="main-nav">
-      <!-- <i class="fa fa-bars fa-3x" aria-hidden="true" id="hamburger"></i> -->
       <h1>Shelly Tang</h1>
       <ul>
-        <li class="tab" data-content="articles"><a href="#">Portfolio</a></li>
-        <li class="tab" data-content="about"><a href="#">About Me</a></li>
-        <li class="tab" data-content="contact"><a href="#">Contact</a></li>
+        <li class="tab" data-content="articles"><a href="/">Portfolio</a></li>
+        <li class="tab" data-content="about"><a href="/about">About Me</a></li>
+        <li class="tab" data-content="contact"><a href="/contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -52,28 +46,33 @@
       <img src="images/shelly.jpg">
       <h2>Hi! I'm Shelly Tang.</h2>
       <p>Tacos yuccie single-origin coffee photo booth mlkshk, authentic migas ugh health goth. Kickstarter keytar tilde kale chips VHS. Adipisicing kombucha minim, banh mi excepteur echo park ea irure wayfarers food truck try-hard disrupt marfa williamsburg cliche. Shoreditch et freegan, locavore veniam before they sold out chambray cred. Aute veniam fashion axe reprehenderit vice waistcoat squid church-key street art, yuccie incididunt. Est gluten-free master cleanse voluptate pariatur, cray raw denim jianbing esse copper mug vaporware raclette. Single-origin coffee vexillologist VHS, wayfarers scenester literally austin pop-up tacos magna nulla paleo.</p>
-      <!-- the below pulls info from an array with the .map() method -->
+      <!-- the below pulls info from an array with the map and reduce method -->
       <p class="projectSummary">Experience with:  </p>
       <p class="clientSummary">Previous clients: </p>
     </section>
 
     <section id="contact" class="tab-content">
       <h2>Let's Connect<h2>
-      <li><a href="mailto:shellytang@gmail.com">shellytang@gmail.com</a></li>
-      <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-      <li><a href="https://www.linkedin.com/in/shelly-tang-1984a413">LinkedIn</a></li>
-      <i class="fa fa-github-square" aria-hidden="true"></i>
-      <li><a href="https://github.com/shellytang">GitHub</a></li>
+      <p>Send me an email: <a href="mailto:shellytang@gmail.com">shellytang@gmail.com</a></p>
+      <ul>
+        <i class="fa fa-linkedin-square fa icon" aria-hidden="true"></i>
+        <li><a href="https://www.linkedin.com/in/shelly-tang-1984a413">LinkedIn</a></li>
+        <i class="fa fa-github-square icon" aria-hidden="true"></i>
+        <li><a href="https://github.com/shellytang">GitHub</a></li>
+      </ul>
     </section>
   </main>
-
   <footer>
     <p>Shelly Tang &copy 2017</p>
   </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.4/handlebars.js"></script>
-    <script src="scripts/article.js"></script>
-    <script src="scripts/projectView.js"></script>
-    <script>Article.fetchAll();</script>
+    <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/views/projectView.js"></script>
+    <script src="scripts/controllers/articleController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/contactController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>
