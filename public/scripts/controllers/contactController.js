@@ -7,6 +7,8 @@
     $('#articles').hide();
     $('#about').hide();
     $('#contact').show();
+
+    repos.requestRepos(repoView.index);
   }
   module.contactController = contactController;
 })(window);
