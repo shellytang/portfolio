@@ -36,93 +36,6 @@ h2 {
   font-size: 1.5em;
 }
 
-#about h2 {
-  margin-top: 0.75em;
-}
-#about p {
-  line-height: 1.5em;
-  margin: 1em 1.3em 1em 1.3em;
-}
-#about {
-  text-align: center;
-  /*max-width: 100%;*/
-}
-/*set image to percentage*/
-#about img {
-  width: 35%;
-  border-radius: 50%;
-  border: 2px solid black;
-  margin-top: 1em;
-}
-#contact {
-  text-align: center;
-}
-#contact h2 {
-  margin-top: 1.5em;
-}
-#contact li {
-  list-style-type: none;
-  padding-left: 0.7em;
-  display: inline;
-}
-#contact ul {
-  font-size: 0.8em;
-  margin-top: 2em;
-
-}
-.repo {
-  font-size: 1.2em;
-  margin-top: 1.5em;
-}
-#contact #githubRepo {
-  font-size: 1em;
-  text-align: left;
-  padding: 0.4em;
-}
-.icon {
-  color: grey;
-  padding-left: 1em;
-}
-/*++++++ general p styling +++++++++*/
-/*p {
-  line-height: 1.5em;
-  margin-top: 1em;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
-}*/
-.projectimage {
-  width: 60%;
-  display: block;
-  margin: auto;
-}
-
-#articles article {
-  padding: 1em;
-}
-
-#articles h1 {
-  text-align: center;
-  padding: 0.3em;
-  font-size: 1.4em;
-}
-
-#articles h2 {
-  text-align: center;
-  font-size: 1.1em;
-  padding: 0.3em;
-}
-
-#articles h3 {
-  text-align: center;
-  font-size: 1em;
-  padding: 0.3em;
-}
-#articles p {
-  line-height: 1.4em;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
-}
-
 footer {
   background-color: #3DD0AC;
   height: 4.5em;
@@ -157,19 +70,5 @@ footer p {
   }
   nav ul li {
     display: inline;
-  }
-  .projectimage {
-    width: 95%;
-    opacity: 0.8;
-  }
-
-  .projectimage:hover {
-    opacity: 1;
-  }
-
-  #articles article {
-  display: inline-block;
-  width: 38%;
-  margin-left: 35px;
   }
 }
