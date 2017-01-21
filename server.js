@@ -5,9 +5,6 @@ const requestProxy = require('express-request-proxy');
 const app = express();
 const PORT = process.env.PORT || 4000;
 app.use(express.static('./public'));
-app.get('/', function(request, response) {
-  response.sendFile('index.html', {root: './public'})
-});
 
 app.get('/github/*', proxyGitHub);
 
@@ -19,6 +16,9 @@ function proxyGitHub(request, response) {
   }))(request, response);
 }
 
+app.get('*', function(request, response) {
+  response.sendFile('index.html', {root: './public'})
+});
 app.listen(PORT, function(){
   console.log('Server is up and running on port 4000 and can be accessed at local host 4000 in your browser');
 })
