@@ -172,13 +172,4 @@ footer p {
   width: 38%;
   margin-left: 35px;
   }
-
-/*tried to this to show/hide clicked on image but caused a lot of layout issues
-  .desktopView {
-    width: 500px;
-    position: absolute;
-    top: 7em;
-    left: 12em;
-    outline: 2px dotted green;
-  }*/
 }
