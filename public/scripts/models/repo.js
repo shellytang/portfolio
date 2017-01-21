@@ -30,6 +30,7 @@
 
   repos.requestRepos = function(callback) {
     $.get('/github/user/repos?per_page=5&sort=updated')
+    console.log('hello')
     .then(data => repos.all = data, err => console.error(err))
     .then(callback);
   };
