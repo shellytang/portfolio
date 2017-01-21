@@ -2,55 +2,13 @@
 //
 (function(module) {
   const repos = {};
-
   repos.all = [];
   repos.requestRepos = function(callback) {
-    $.ajax({
-      url: 'https:api.github.com/users/shellytang/repos?type=owner',
-      method: 'GET',
-      headers: {
-        Authorization: `token ${githubToken}`
-        // Authorization: 'token ' + githubToken
-      }
-    })
-    .then(data => {
-      repos.all = data;
-      callback();
-    })
+    $.get('/github/user/repos?per_page=5&sort=updated')
+    .then(data => repos.all = data, err => console.error(err))
+    .then(callback);
   };
-  repos.with = fork => repos.all.filter(repo => repo !== [fork]);
+  repos.with = attr => repos.all.filter(repo => repo[attr]);
   module.repos = repos;
-// })(window);
-
-// (function(module) {
-//   const repos = {};
-//
-//   repos.all = [];
-//
-//   repos.requestRepos = function(callback) {
-//     $.get('/github/user/repos?per_page=5&sort=updated')
-//     .then(data => repos.all = data, err => console.error(err))
-//     .then(callback);
-//   };
-//   repos.with = attr => repos.all.filter(repo => repo[attr]);
-//   module.repos = repos;
-
-// (function(module) {
-//   const repos = {};
-//
-//   repos.all = [];
-//
-//   repos.requestRepos = function(callback) {
-//     $.get('github/users/shellytang/repos?type=owner')
-//     .then(function(data) {
-//       console.log(typeof(data))
-//       repos.all = data;
-//       console.log(data);
-//       callback();
-//     })
-//   };
-//   repos.with = attr => repos.all.filter(repo => repo[attr]);
-//   module.repos = repos;
-
 
 })(window);
