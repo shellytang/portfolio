@@ -9,10 +9,9 @@ app.get('*', function(request, response) {
   response.sendFile('index.html', {root: './public'})
 });
 
-// REVIEW: This is a new route that will utilize our middle man proxy.
 app.get('/github/*', proxyGitHub);
-
-// REVIEW: This is a new proxy method which acts as a 'middle man' (middleware) for our request.
+//
+// // REVIEW: This is a new proxy method which acts as a 'middle man' (middleware) for our request.
 function proxyGitHub(request, response) {
   console.log('Routing GitHub request for', request.params[0]);
   (requestProxy({

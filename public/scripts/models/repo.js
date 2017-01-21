@@ -4,7 +4,6 @@
   const repos = {};
 
   repos.all = [];
-
   // repos.requestRepos = function(callback) {
   //   $.ajax({
   //     url: 'https:api.github.com/users/shellytang/repos?type=owner',
@@ -21,11 +20,11 @@
   // };
   repos.requestRepos = function(callback) {
   // DONE: Refactor your ajax call to use the $.get method, and make a request to our new proxy route.
-    $.get('/github/user/repos?type=owner') //remove .com!!
+    $.get('/github/user/repos?per_page=5&sort=updated') //remove .com!!
     .then(data => repos.all = data, err => console.error(err)) // es6 syntax arrow functions
     .then(callback);
   };
-// repos.with = attr => repos.all.filter(repo => repo[attr]);
-  repos.with = fork => repos.all.filter(repo => repo !== [fork]);
+  repos.with = attr => repos.all.filter(repo => repo[attr]);
+  // repos.with = fork => repos.all.filter(repo => repo !== [fork]);
   module.repos = repos;
 })(window);
