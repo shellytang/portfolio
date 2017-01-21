@@ -20,15 +20,21 @@
 #contact h2 {
   margin-top: 1.5em;
 }
-#contact li {
-  list-style-type: none;
-  padding-left: 0.7em;
-  display: inline;
-}
+
 #contact ul {
   font-size: 0.8em;
   margin-top: 2em;
+}
 
+.collapse {
+  padding: 0.3em;
+  text-align: center;
+  display: none;
+}
+
+#contact li {
+  padding: 1em;
+  line-height: 1.5em;
 }
 .repo {
   font-size: 1.2em;
@@ -76,5 +82,10 @@
   display: inline-block;
   width: 38%;
   margin-left: 35px;
+  }
+  #contact li {
+    list-style-type: none;
+    padding-left: 0.7em;
+    display: inline;
   }
 }
