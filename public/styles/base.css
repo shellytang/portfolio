@@ -36,7 +36,7 @@ h2 {
   font-size: 1.5em;
 }
 
-#about h2 {
+/*#about h2 {
   margin-top: 0.75em;
 }
 #about p {
@@ -45,9 +45,7 @@ h2 {
 }
 #about {
   text-align: center;
-  /*max-width: 100%;*/
 }
-/*set image to percentage*/
 #about img {
   width: 35%;
   border-radius: 50%;
@@ -82,21 +80,14 @@ h2 {
 .icon {
   color: grey;
   padding-left: 1em;
-}
-/*++++++ general p styling +++++++++*/
-/*p {
-  line-height: 1.5em;
-  margin-top: 1em;
-  margin-left: 1.3em;
-  margin-right: 1.3em;
 }*/
-.projectimage {
+/*.projectimage {
   width: 60%;
   display: block;
   margin: auto;
-}
+}*/
 
-#articles article {
+/*#articles article {
   padding: 1em;
 }
 
@@ -121,7 +112,7 @@ h2 {
   line-height: 1.4em;
   margin-left: 1.3em;
   margin-right: 1.3em;
-}
+}*/
 
 footer {
   background-color: #3DD0AC;
@@ -158,18 +149,18 @@ footer p {
   nav ul li {
     display: inline;
   }
-  .projectimage {
+  /*.projectimage {
     width: 95%;
     opacity: 0.8;
   }
 
   .projectimage:hover {
     opacity: 1;
-  }
+  }*/
 
-  #articles article {
+  /*#articles article {
   display: inline-block;
   width: 38%;
   margin-left: 35px;
-  }
+  }*/
 }

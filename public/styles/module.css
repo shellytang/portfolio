@@ -1,13 +1,80 @@
-
-
-
-@media screen and (min-width: 730px) {
-  /*#hamburger {
-    display: none;
-  }*/
+#about h2 {
+  margin-top: 0.75em;
+}
+#about p {
+  line-height: 1.5em;
+  margin: 1em 1.3em 1em 1.3em;
+}
+#about {
+  text-align: center;
+}
+#about img {
+  width: 35%;
+  border-radius: 50%;
+  border: 2px solid black;
+  margin-top: 1em;
+}
+#contact {
+  text-align: center;
+}
+#contact h2 {
+  margin-top: 1.5em;
+}
+#contact li {
+  list-style-type: none;
+  padding-left: 0.7em;
+  display: inline;
+}
+#contact ul {
+  font-size: 0.8em;
+  margin-top: 2em;
 
 }
+.repo {
+  font-size: 1.2em;
+  margin-top: 1.5em;
+}
+#contact #githubRepo {
+  font-size: 1em;
+  text-align: left;
+  padding: 0.4em;
+}
+.icon {
+  color: grey;
+  padding-left: 1em;
+}
 
-/*.template {
-  display: none;
-}*/
+#articles article {
+  padding: 1em;
+}
+
+#articles h1 {
+  text-align: center;
+  padding: 0.3em;
+  font-size: 1.4em;
+}
+
+#articles h2 {
+  text-align: center;
+  font-size: 1.1em;
+  padding: 0.3em;
+}
+
+#articles h3 {
+  text-align: center;
+  font-size: 1em;
+  padding: 0.3em;
+}
+#articles p {
+  line-height: 1.4em;
+  margin-left: 1.3em;
+  margin-right: 1.3em;
+}
+
+@media screen and (min-width: 730px) {
+  #articles article {
+  display: inline-block;
+  width: 38%;
+  margin-left: 35px;
+  }
+}
