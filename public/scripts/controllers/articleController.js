@@ -2,7 +2,6 @@
 
 (function(module) {
   const articleController = {};
-  console.log('this is the articleview controller!');
 
   articleController.init = function () {
     $('#about').hide();
